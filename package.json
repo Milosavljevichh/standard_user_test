@@ -1,0 +1,18 @@
+{
+  "name": "standard_user_test",
+  "version": "1.0.0",
+  "description": "Ovaj repozitorijum sadrži automatizovane testove za proces narudžbine na sajtu [SauceDemo](https://www.saucedemo.com/). Testovi su implementirani koristeći Mocha kao test framework i Selenium WebDriver za automatizaciju browsera.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.23.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}
