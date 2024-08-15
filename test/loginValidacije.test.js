@@ -22,13 +22,13 @@ describe("Test neuspesnog logina", function(){
     
     let driver;
 
-    before(async () => {
+    this.beforeEach(async () => {
         driver = new Builder().forBrowser("chrome").build();
         await driver.get(visitPage);
         await driver.manage().window().maximize();
     });
 
-    after(async () => {
+    this.afterEach(async () => {
       await driver.quit();
     });
 
@@ -83,7 +83,7 @@ describe("Test neuspesnog logina", function(){
         assert.strictEqual(errorMessageText, "Epic sadface: Password is required");
     });
 
-    it.only("Logovanje samo s passwordom", async()=>{
+    it("Logovanje samo s passwordom", async()=>{
         
         await driver.findElement(passwordInput).sendKeys(loginPassword);
         await driver.findElement(logInBtn).click()
