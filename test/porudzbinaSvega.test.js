@@ -1,3 +1,4 @@
+//testiramo da li radi proces porudzbine za svaki item
 const { Builder } = require('selenium-webdriver');
 
 const assert = require("assert")
@@ -16,7 +17,6 @@ const zipCode = "35000"
 const usernameInput = {id: "user-name"}
 const passwordInput = {id: "password"}
 const logInBtn = {id: "login-button"}
-const backpackBtn = {id: "add-to-cart-sauce-labs-backpack"}
 const shoppingCart = {id: "shopping_cart_container"}
 const checkoutBtn = {id: "checkout"}
 const firstNameInput = {id: "first-name"}
@@ -25,8 +25,24 @@ const zipCodeInput = {id: "postal-code"}
 const finishBtn = {id: "finish"}
 const homeBtn = {id: "back-to-products"}
 const continueBtn = {id:"continue"}
+//items
+const backpackBtn = {id: "add-to-cart-sauce-labs-backpack"}
+const bikeLight = {id:"add-to-cart-sauce-labs-bike-light"}
+const boltShirt = {id:"add-to-cart-sauce-labs-bolt-t-shirt"}
+const jacket = {id:"add-to-cart-sauce-labs-fleece-jacket"}
+const onesie = {id:"add-to-cart-sauce-labs-onesie"}
+const redShirt = {id:"add-to-cart-sauce-labs-onesie"}
 
-describe("Testovi za standard_usera", function(){
+const toCartBtns = [
+    backpackBtn,
+    bikeLight,
+    boltShirt,
+    jacket,
+    onesie,
+    redShirt
+]
+
+describe("Testovi pojedinacne porudzbine", function(){
     this.timeout(10000)
 
     let driver;
@@ -42,27 +58,30 @@ describe("Testovi za standard_usera", function(){
     });
 
     
-    it("Proces narudzbine", async () => {
+    it("Narucivanje svako itema", async () => {
         //logovanje
         await driver.findElement(usernameInput).sendKeys(loginUsername);
         await driver.findElement(passwordInput).sendKeys(loginPassword);
         await driver.findElement(logInBtn).click()
         await driver.sleep(1000)
 
-        //dodavanje u korpu i checkout
-        await driver.findElement(backpackBtn).click()
-        await driver.findElement(shoppingCart).click()
-        await driver.findElement(checkoutBtn).click()
+        for (let i = 0; i < toCartBtns.length; i++){
+            await driver.findElement(toCartBtns[i]).click()
+            //dodavanje u korpu i checkout
+            await driver.findElement(shoppingCart).click()
+            await driver.findElement(checkoutBtn).click()
+            //popunjavanje informacija
+            await driver.findElement(firstNameInput).sendKeys(firstName)
+            await driver.findElement(lastNameInput).sendKeys(lastName)
+            await driver.findElement(zipCodeInput).sendKeys(zipCode)
+            await driver.findElement(continueBtn).click()
+    
+            //zavrsni koraci
+            await driver.findElement(finishBtn).click()
+            await driver.findElement(homeBtn).click()
+        }
 
-        //popunjavanje informacija
-        await driver.findElement(firstNameInput).sendKeys(firstName)
-        await driver.findElement(lastNameInput).sendKeys(lastName)
-        await driver.findElement(zipCodeInput).sendKeys(zipCode)
-        await driver.findElement(continueBtn).click()
 
-        //zavrsni koraci
-        await driver.findElement(finishBtn).click()
-        await driver.findElement(homeBtn).click()
 
         // Dobijanje trenutnog URL-a
         const currentUrl = await driver.getCurrentUrl();
