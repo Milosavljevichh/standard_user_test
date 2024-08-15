@@ -1,6 +1,4 @@
-Naravno! Evo README datoteke prevedene na engleski:
 
-```markdown
 # Automated Tests for Order Process on SauceDemo
 
 This repository contains automated tests for the order process on the [SauceDemo](https://www.saucedemo.com/) website. The tests are implemented using Mocha as the test framework and Selenium WebDriver for browser automation.
