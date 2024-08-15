@@ -1,105 +1,104 @@
+Naravno! Evo README datoteke prevedene na engleski:
 
-# Automatizovani Testovi za Proces Narudžbine na SauceDemo
+```markdown
+# Automated Tests for Order Process on SauceDemo
 
-Ovaj repozitorijum sadrži automatizovane testove za proces narudžbine na sajtu [SauceDemo](https://www.saucedemo.com/). Testovi su implementirani koristeći Mocha kao test framework i Selenium WebDriver za automatizaciju browsera.
+This repository contains automated tests for the order process on the [SauceDemo](https://www.saucedemo.com/) website. The tests are implemented using Mocha as the test framework and Selenium WebDriver for browser automation.
 
-## Sadržaj
+## Table of Contents
 
-- [Instalacija](#instalacija)
-- [Test Scenariji](#test-scenariji)
-- [Pokretanje Testova](#pokretanje-testova)
-- [Struktura Testova](#struktura-testova)
-- [Izveštavanje](#izveštavanje)
-- [Doprinos](#doprinos)
-- [Licenca](#licenca)
+- [Installation](#installation)
+- [Test Scenarios](#test-scenarios)
+- [Running Tests](#running-tests)
+- [Test Structure](#test-structure)
+- [Reporting](#reporting)
+- [Contributing](#contributing)
 
-## Instalacija
+## Installation
 
-### Preduslovi
+### Prerequisites
 
-- Instalirani [Node.js](https://nodejs.org/) i npm na vašem računaru
-- Instaliran Google Chrome ili neki drugi WebDriver-kompatibilan browser
+- [Node.js](https://nodejs.org/) and npm installed on your computer
+- Google Chrome or another WebDriver-compatible browser installed
 
-### Postavljanje Projekta
+### Project Setup
 
-1. Klonirajte ovaj repozitorijum:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/vasusername/saucedemo-automation.git
+   git clone https://github.com/yourusername/saucedemo-automation.git
    cd saucedemo-automation
    ```
 
-2. Instalirajte zavisnosti:
+2. Install the dependencies:
    ```bash
    npm install
    ```
 
-3. Uverite se da imate najnoviju verziju ChromeDriver-a:
+3. Ensure you have the latest version of ChromeDriver:
    ```bash
    npm install chromedriver --save-dev
    ```
 
-4. Konfigurišite environment varijable (opciono):
-   - Kreirajte `.env` datoteku u glavnom direktorijumu i dodajte sledeće:
+4. Configure environment variables (optional):
+   - Create a `.env` file in the root directory and add the following:
      ```bash
      SAUCEDEMO_URL=https://www.saucedemo.com/
      SAUCEDEMO_USERNAME=standard_user
      SAUCEDEMO_PASSWORD=secret_sauce
      ```
 
-## Test Scenariji
+## Test Scenarios
 
-Sledeći test scenariji su pokriveni:
+The following test scenarios are covered:
 
-1. **Prijava kao Standardni Korisnik**
-   - Provera da li standardni korisnik može uspešno da se prijavi.
+1. **Login as Standard User**
+   - Verifies that a standard user can successfully log in.
   
-2. **Dodavanje Artikala u Korpu**
-   - Provera da li se artikli mogu dodati u korpu.
+2. **Add Items to Cart**
+   - Verifies that items can be added to the cart.
 
-3. **Prelazak na Plaćanje**
-   - Provera da li korisnik može da pređe na stranicu za plaćanje.
+3. **Proceed to Checkout**
+   - Verifies that the user can proceed to the checkout page.
   
-4. **Završetak Narudžbine**
-   - Provera da li korisnik može uspešno da završi narudžbinu.
+4. **Complete the Order**
+   - Verifies that the user can successfully complete an order.
 
-## Pokretanje Testova
+## Running Tests
 
-Da biste pokrenuli testove, koristite sledeću komandu:
+To run the tests, use the following command:
 
 ```bash
 npm test
 ```
 
-Ova komanda će izvršiti sve test slučajeve redom.
+This command will execute all test cases in sequence.
 
-## Struktura Testova
+## Test Structure
 
-- **`test/`**: Sadrži sve test datoteke.
-- **`pages/`**: Sadrži page object klase koje predstavljaju različite stranice na sajtu.
-- **`utils/`**: Sadrži pomoćne funkcije i alate.
+- **`test/`**: Contains all test files.
 
-### Primer Strukture Test Datoteka
+### Example Test File Structure
 
 ```bash
 saucedemo-automation/
 │
 ├── test/
-│   ├── login.test.js
-│   ├── add_to_cart.test.js
-│   └── checkout.test.js
-│
-├── pages/
-│   ├── login.page.js
-│   ├── inventory.page.js
-│   ├── cart.page.js
-│   └── checkout.page.js
-│
-├── utils/
-│   └── helpers.js
+│   ├── loginValidations.test.js
+│   ├── orderProcess.test.js
+│   ├── orderingEveryItem.test.js
+│   ├── filtering.test.js
+│   ├── displayedPictures.test.js
+│   ├── itemNavigation.test.js
+│   ├── cartDisplay.test.js
+│   └── logout.test.js
 │
 └── .env
 ```
 
-## Izveštavanje
+## Reporting
 
-Rezultati testova će biti prikazani u konzoli nakon izvršenja. Za detaljnije izveštavanje, možete integrisati Mocha sa drugim alatima za izveštavanje kao što je `mochawesome`.
+Test results will be displayed in the console after execution. For more detailed reporting, you can integrate Mocha with other reporting tools such as `mochawesome`.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
