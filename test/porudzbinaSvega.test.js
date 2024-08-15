@@ -31,7 +31,7 @@ const bikeLight = {id:"add-to-cart-sauce-labs-bike-light"}
 const boltShirt = {id:"add-to-cart-sauce-labs-bolt-t-shirt"}
 const jacket = {id:"add-to-cart-sauce-labs-fleece-jacket"}
 const onesie = {id:"add-to-cart-sauce-labs-onesie"}
-const redShirt = {id:"add-to-cart-sauce-labs-onesie"}
+const redShirt = {id:"add-to-cart-test.allthethings()-t-shirt-(red)"}
 
 const toCartBtns = [
     backpackBtn,
@@ -58,7 +58,7 @@ describe("Testovi pojedinacne porudzbine", function(){
     });
 
     
-    it("Narucivanje svako itema", async () => {
+    it("Narucivanje svakog itema", async () => {
         //logovanje
         await driver.findElement(usernameInput).sendKeys(loginUsername);
         await driver.findElement(passwordInput).sendKeys(loginPassword);
@@ -79,14 +79,11 @@ describe("Testovi pojedinacne porudzbine", function(){
             //zavrsni koraci
             await driver.findElement(finishBtn).click()
             await driver.findElement(homeBtn).click()
+            // Dobijanje trenutnog URL-a
+            const currentUrl = await driver.getCurrentUrl();
+    
+            // Provera da li je URL onaj koji očekujemo
+            assert.strictEqual(currentUrl, homePage, 'URL nije tačan');
         }
-
-
-
-        // Dobijanje trenutnog URL-a
-        const currentUrl = await driver.getCurrentUrl();
-
-        // Provera da li je URL onaj koji očekujemo
-        assert.strictEqual(currentUrl, homePage, 'URL nije tačan');
     });
 })
