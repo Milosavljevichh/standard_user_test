@@ -55,6 +55,15 @@ const navigationLinks = [
     {id:{id:"item_3_title_link"}, expectedLink:"https://www.saucedemo.com/inventory-item.html?id=3"}
 ]
 
+const productImgAlts = [
+    "Sauce Labs Backpack",
+    "Sauce Labs Bike Light",
+    "Sauce Labs Bolt T-Shirt",
+    "Sauce Labs Fleece Jacket",
+    "Sauce Labs Onesie",
+    "Test.allTheThings() T-Shirt (Red)"
+]
+
 module.exports = {
     visitPage,
     homePage,
@@ -88,5 +97,5 @@ module.exports = {
     inventoryItems,
     inventoryItem,
     inventoryItemPrice,
-    navigationLinks
+    navigationLinks,productImgAlts
 };

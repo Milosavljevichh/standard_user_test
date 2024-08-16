@@ -10,7 +10,7 @@ const {
     logInBtn
  } = require('./constants');
 
-describe("Cart display test", function(){
+describe("Log out test", function(){
     this.timeout(10000)
 
     let driver;
@@ -31,7 +31,7 @@ describe("Cart display test", function(){
     });
 
     
-    it.only("Checking the cart badge number", async () => {
+    it("Logging out", async () => {
         
         await driver.findElement(By.id('react-burger-menu-btn')).click();
         await driver.sleep(1000);
@@ -40,6 +40,6 @@ describe("Cart display test", function(){
         
         const currentUrl = await driver.getCurrentUrl();
 
-        assert.strictEqual(currentUrl, visitPage, "logoutovanje neuspesno")
+        assert.strictEqual(currentUrl, visitPage, "Logout not succesful")
     });
 })

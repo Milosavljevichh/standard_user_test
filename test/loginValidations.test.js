@@ -14,7 +14,7 @@ const {
 } = require('./constants');
 
 
-describe("Test neuspesnog logina", function(){
+describe("Login validations test", function(){
     this.timeout(10000)
     
     let driver;
@@ -29,7 +29,7 @@ describe("Test neuspesnog logina", function(){
       await driver.quit();
     });
 
-    it("Logovanje s praznim inputom", async()=>{
+    it("Login with empty input", async()=>{
         await driver.findElement(logInBtn).click()
     
         assert.ok(errorMessage, "Element sa porukom o gresci ne postoji");
@@ -42,7 +42,7 @@ describe("Test neuspesnog logina", function(){
         
     });
     
-    it("Logovanje s pogresnim username-om", async()=>{
+    it("Login with wrong username", async()=>{
         
         await driver.findElement(usernameInput).sendKeys(wrongLoginUsername);
         await driver.findElement(passwordInput).sendKeys(loginPassword);
@@ -55,7 +55,7 @@ describe("Test neuspesnog logina", function(){
         assert.strictEqual(errorMessageText, "Epic sadface: Username and password do not match any user in this service");
     });
 
-    it("Logovanje s pogresnim passwordom", async()=>{
+    it("Login with wrong password", async()=>{
         
         await driver.findElement(usernameInput).sendKeys(loginUsername);
         await driver.findElement(passwordInput).sendKeys(wrongLoginPassword);
@@ -68,7 +68,7 @@ describe("Test neuspesnog logina", function(){
         assert.strictEqual(errorMessageText, "Epic sadface: Username and password do not match any user in this service");
     });
 
-    it("Logovanje samo s usernameom", async()=>{
+    it("Login with only username", async()=>{
         
         await driver.findElement(usernameInput).sendKeys(loginUsername);
         await driver.findElement(logInBtn).click()
@@ -80,7 +80,7 @@ describe("Test neuspesnog logina", function(){
         assert.strictEqual(errorMessageText, "Epic sadface: Password is required");
     });
 
-    it("Logovanje samo s passwordom", async()=>{
+    it("Login only with password", async()=>{
         
         await driver.findElement(passwordInput).sendKeys(loginPassword);
         await driver.findElement(logInBtn).click()

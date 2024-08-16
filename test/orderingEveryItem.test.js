@@ -25,7 +25,7 @@ const {
 
 
 
-describe("Testovi pojedinacne porudzbine", function(){
+describe("Testing orders for each item", function(){
     this.timeout(10000)
 
     let driver;
@@ -41,7 +41,7 @@ describe("Testovi pojedinacne porudzbine", function(){
     });
 
     
-    it("Narucivanje svakog itema", async () => {
+    it("Ordering every item", async () => {
         //logovanje
         await driver.findElement(usernameInput).sendKeys(loginUsername);
         await driver.findElement(passwordInput).sendKeys(loginPassword);
@@ -66,7 +66,7 @@ describe("Testovi pojedinacne porudzbine", function(){
             const currentUrl = await driver.getCurrentUrl();
     
             // Provera da li je URL onaj koji očekujemo
-            assert.strictEqual(currentUrl, homePage, 'URL nije tačan');
+            assert.strictEqual(currentUrl, homePage, 'URL not correct');
         }
     });
 })
