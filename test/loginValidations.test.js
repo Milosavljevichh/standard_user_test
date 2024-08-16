@@ -1,21 +1,18 @@
 //testiramo da li radi proces porudzbine za svaki item
 const { Builder, By } = require('selenium-webdriver');
+const assert = require("assert");
+const {
+    visitPage,
+    loginUsername,
+    wrongLoginUsername,
+    loginPassword,
+    wrongLoginPassword,
+    usernameInput,
+    passwordInput,
+    logInBtn,
+    errorMessage
+} = require('./constants');
 
-const assert = require("assert")
-//Basic info
-const visitPage = "https://www.saucedemo.com/"
-const homePage = 'https://www.saucedemo.com/inventory.html'
-
-const loginUsername  = "standard_user"
-const wrongLoginUsername  = "standarduser"
-const loginPassword = "secret_sauce"
-const wrongLoginPassword = "secretsauce"
-
-//elements
-const usernameInput = {id: "user-name"}
-const passwordInput = {id: "password"}
-const logInBtn = {id: "login-button"}
-const errorMessage = {class: "error-message-container"}
 
 describe("Test neuspesnog logina", function(){
     this.timeout(10000)
