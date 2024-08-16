@@ -1,7 +1,7 @@
 const { Builder } = require('selenium-webdriver');
 
 const assert = require("assert")
-const [
+const {
     visitPage,
     loginUsername,
     loginPassword,
@@ -9,7 +9,7 @@ const [
     passwordInput,
     logInBtn,
     backpackBtn
-] = require('./constants');
+ } = require('./constants');
 
 describe("Cart display test", function(){
     this.timeout(10000)
@@ -32,7 +32,7 @@ describe("Cart display test", function(){
     });
 
     
-    it.only("Checking the cart badge number", async () => {
+    it("Checking the cart badge number", async () => {
 
         await driver.findElement(backpackBtn).click()
         let cartNum = await driver.findElement({className: "shopping_cart_badge"}).getText()

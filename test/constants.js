@@ -46,6 +46,15 @@ const toCartBtns = [
     redShirt
 ]
 
+const navigationLinks = [
+    {id:{id: "item_4_title_link"}, expectedLink: "https://www.saucedemo.com/inventory-item.html?id=4"},
+    {id:{id: "item_0_title_link"}, expectedLink: "https://www.saucedemo.com/inventory-item.html?id=0"},
+    {id:{id: "item_1_title_link"}, expectedLink: "https://www.saucedemo.com/inventory-item.html?id=1"},
+    {id:{id:"item_5_title_link"}, expectedLink:"https://www.saucedemo.com/inventory-item.html?id=5"},
+    {id:{id:"item_2_title_link"}, expectedLink:"https://www.saucedemo.com/inventory-item.html?id=2"},
+    {id:{id:"item_3_title_link"}, expectedLink:"https://www.saucedemo.com/inventory-item.html?id=3"}
+]
+
 module.exports = {
     visitPage,
     homePage,
@@ -78,5 +87,6 @@ module.exports = {
     filterDropdown,
     inventoryItems,
     inventoryItem,
-    inventoryItemPrice
+    inventoryItemPrice,
+    navigationLinks
 };
