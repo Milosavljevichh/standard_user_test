@@ -31,7 +31,7 @@ describe("Navigation test", function(){
     });
 
     
-    it.only("Checking the navigation links", async () => {
+    it("Checking the navigation links", async () => {
 
         for (let i = 0; i<navigationLinks.length;i++) {
             await driver.findElement(navigationLinks[i].id).click()
