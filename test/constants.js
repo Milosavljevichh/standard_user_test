@@ -25,6 +25,7 @@ const zipCodeInput = {id: "postal-code"}
 const finishBtn = {id: "finish"}
 const homeBtn = {id: "back-to-products"}
 const continueBtn = {id:"continue"}
+const filterDropdown = {className: "product_sort_container"}
 //items
 const backpackBtn = {id: "add-to-cart-sauce-labs-backpack"}
 const bikeLight = {id:"add-to-cart-sauce-labs-bike-light"}
@@ -32,6 +33,9 @@ const boltShirt = {id:"add-to-cart-sauce-labs-bolt-t-shirt"}
 const jacket = {id:"add-to-cart-sauce-labs-fleece-jacket"}
 const onesie = {id:"add-to-cart-sauce-labs-onesie"}
 const redShirt = {id:"add-to-cart-test.allthethings()-t-shirt-(red)"}
+const inventoryItems = {className: "inventory_item"}
+const inventoryItem = {className: "inventory_item_name"}
+const inventoryItemPrice = {className: "inventory_item_price"}
 
 const toCartBtns = [
     backpackBtn,
@@ -70,5 +74,9 @@ module.exports = {
     jacket,
     onesie,
     redShirt,
-    toCartBtns
+    toCartBtns,
+    filterDropdown,
+    inventoryItems,
+    inventoryItem,
+    inventoryItemPrice
 };

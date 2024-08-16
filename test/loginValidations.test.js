@@ -1,4 +1,4 @@
-//testiramo da li radi proces porudzbine za svaki item
+
 const { Builder, By } = require('selenium-webdriver');
 const assert = require("assert");
 const {
