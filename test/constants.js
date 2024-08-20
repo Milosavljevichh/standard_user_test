@@ -1,6 +1,6 @@
 
 //Basic info
-const visitPage = "https://www.saucedemo.com/"
+const visitPage = process.env.SAUCEDEMO_URL
 const homePage = 'https://www.saucedemo.com/inventory.html'
 
 const loginUsername  = "standard_user"

@@ -1,6 +1,7 @@
 
 const { Builder, By } = require('selenium-webdriver');
 const assert = require("assert");
+require('dotenv').config();
 const {
     visitPage,
     loginUsername,
@@ -20,7 +21,7 @@ describe("Login validations test", function(){
     let driver;
 
     this.beforeEach(async () => {
-        driver = new Builder().forBrowser("chrome").build();
+        driver = new Builder().forBrowser(process.env.BROWSER).build();
         await driver.get(visitPage);
         await driver.manage().window().maximize();
     });

@@ -1,0 +1,791 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 14,
+    "passes": 14,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-20T14:08:23.080Z",
+    "end": "2024-08-20T14:09:04.311Z",
+    "duration": 41231,
+    "testsRegistered": 14,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e035d921-792d-4952-9ace-f602dc19e4b8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b15556f-3225-445f-ae35-46608d26866a",
+          "title": "Cart display test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\cartDisplay.test.js",
+          "file": "\\test\\cartDisplay.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Cart display test\"",
+              "fullTitle": "Cart display test \"before all\" hook in \"Cart display test\"",
+              "timedOut": false,
+              "duration": 3387,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\n//login\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(700)",
+              "err": {},
+              "uuid": "5305afae-68a9-4dd4-bfc7-27808b355b3a",
+              "parentUUID": "9b15556f-3225-445f-ae35-46608d26866a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Cart display test\"",
+              "fullTitle": "Cart display test \"after all\" hook in \"Cart display test\"",
+              "timedOut": false,
+              "duration": 55,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "fb716ae5-df9a-4ac4-a21c-a63ed71b21c0",
+              "parentUUID": "9b15556f-3225-445f-ae35-46608d26866a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Checking the cart badge number",
+              "fullTitle": "Cart display test Checking the cart badge number",
+              "timedOut": false,
+              "duration": 72,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(backpackBtn).click()\n        let cartNum = await driver.findElement({className: \"shopping_cart_badge\"}).getText()\n        assert.equal(cartNum, 1, 'Cart number not correct');",
+              "err": {},
+              "uuid": "0975e5aa-1451-4e1b-b30d-443f75e02d4e",
+              "parentUUID": "9b15556f-3225-445f-ae35-46608d26866a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0975e5aa-1451-4e1b-b30d-443f75e02d4e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 72,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "b00e734f-5dd6-430d-a423-1b44ebb95718",
+          "title": "Navigation test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\displayedPictures.test.js",
+          "file": "\\test\\displayedPictures.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Navigation test\"",
+              "fullTitle": "Navigation test \"before all\" hook in \"Navigation test\"",
+              "timedOut": false,
+              "duration": 3084,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\n//login\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(700)",
+              "err": {},
+              "uuid": "417680db-c06f-4cbb-8e5e-511548e9ea4c",
+              "parentUUID": "b00e734f-5dd6-430d-a423-1b44ebb95718",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Navigation test\"",
+              "fullTitle": "Navigation test \"after all\" hook in \"Navigation test\"",
+              "timedOut": false,
+              "duration": 56,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "d35818f7-c7c5-4fde-b935-fb445d50bffd",
+              "parentUUID": "b00e734f-5dd6-430d-a423-1b44ebb95718",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Checking the navigation links",
+              "fullTitle": "Navigation test Checking the navigation links",
+              "timedOut": false,
+              "duration": 95,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let items = await driver.findElements(inventoryItems);\nfor (let i=0;i<items.length;i++) {\n    let pic = await items[i];\n    let imageElement = await pic.findElement(By.css('img.inventory_item_img'));\n    let altText = await imageElement.getAttribute('alt');\n    \n    assert.strictEqual(altText, productImgAlts[i], \"Incorrect picture\")\n}",
+              "err": {},
+              "uuid": "abcd9960-0272-4eef-b49b-dec0a537a95b",
+              "parentUUID": "b00e734f-5dd6-430d-a423-1b44ebb95718",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "abcd9960-0272-4eef-b49b-dec0a537a95b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 95,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+          "title": "Filtering tests",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\filtering.test.js",
+          "file": "\\test\\filtering.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Filtering tests\"",
+              "fullTitle": "Filtering tests \"before all\" hook in \"Filtering tests\"",
+              "timedOut": false,
+              "duration": 3104,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\n//login\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(700)",
+              "err": {},
+              "uuid": "4aec1bce-2b86-4bc3-8ead-738a03c1b6d6",
+              "parentUUID": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Filtering tests\"",
+              "fullTitle": "Filtering tests \"after all\" hook in \"Filtering tests\"",
+              "timedOut": false,
+              "duration": 54,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "5c159789-1728-4b96-9942-c5e058f45452",
+              "parentUUID": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Filtering Z to A",
+              "fullTitle": "Filtering tests Filtering Z to A",
+              "timedOut": false,
+              "duration": 294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(filterDropdown).click()\nawait driver.findElement(By.css('option[value=\"za\"]')).click()\n\nlet items = await driver.findElements(inventoryItems);\nlet itemNames = [];\nfor (let item of items) {\n    let nameText = await item.findElement(inventoryItem).getText();\n    itemNames.push(nameText);\n}\n// We copy the items and manually sort them from A to Z and then we reverse it\nlet sortedNames = [...itemNames].sort().reverse();\nassert.deepStrictEqual(itemNames, sortedNames, \"Not properly sorted from Z to A\");",
+              "err": {},
+              "uuid": "80e95db5-c677-4e8d-9ee5-0a9ae1daabea",
+              "parentUUID": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtering by price, low to high",
+              "fullTitle": "Filtering tests Filtering by price, low to high",
+              "timedOut": false,
+              "duration": 192,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(filterDropdown).click()\nlet optionElement = await driver.findElement(By.css('option[value=\"lohi\"]'));\nawait optionElement.click();\nlet items = await driver.findElements(inventoryItems);\nlet itemPrices = [];\nfor (let item of items) {\n    let priceText = await item.findElement(inventoryItemPrice).getText();\n    itemPrices.push(priceText);\n};\nlet sortedPrices = [...itemPrices].sort(function(a, b){return a-b})\nassert.deepStrictEqual(itemPrices, sortedPrices, \"Not properly sorted from low to high\");",
+              "err": {},
+              "uuid": "e8ed4a37-b51a-4fbf-b16d-c313b5928417",
+              "parentUUID": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtering by price, high to low",
+              "fullTitle": "Filtering tests Filtering by price, high to low",
+              "timedOut": false,
+              "duration": 176,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(filterDropdown).click()\nlet optionElement = await driver.findElement(By.css('option[value=\"hilo\"]'));\nawait optionElement.click();\nlet items = await driver.findElements(inventoryItems);\nlet itemPrices = [];\nfor (let item of items) {\n    let priceText = await item.findElement(inventoryItemPrice).getText();\n    itemPrices.push(priceText);\n};\nlet sortedPrices = [...itemPrices].sort(function(a, b){return b-a})\nassert.deepStrictEqual(itemPrices, sortedPrices, \"Not properly sorted from low to high\");",
+              "err": {},
+              "uuid": "e6354b7e-83e5-48c2-8b3d-aab798237fab",
+              "parentUUID": "f0a22926-3c1b-4fa0-9c9e-582f81a18eca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "80e95db5-c677-4e8d-9ee5-0a9ae1daabea",
+            "e8ed4a37-b51a-4fbf-b16d-c313b5928417",
+            "e6354b7e-83e5-48c2-8b3d-aab798237fab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 662,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "7ab1d166-b8e8-45ec-8fb1-3826f507d417",
+          "title": "Navigation test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\itemNavigation.test.js",
+          "file": "\\test\\itemNavigation.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Navigation test\"",
+              "fullTitle": "Navigation test \"before all\" hook in \"Navigation test\"",
+              "timedOut": false,
+              "duration": 3047,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\n//login\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(700)",
+              "err": {},
+              "uuid": "0511883e-028c-4b54-ac8d-205cd654743c",
+              "parentUUID": "7ab1d166-b8e8-45ec-8fb1-3826f507d417",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Navigation test\"",
+              "fullTitle": "Navigation test \"after all\" hook in \"Navigation test\"",
+              "timedOut": false,
+              "duration": 57,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "ec74291a-2e3d-4176-9bfb-dbb7b4eb8c84",
+              "parentUUID": "7ab1d166-b8e8-45ec-8fb1-3826f507d417",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Checking the navigation links",
+              "fullTitle": "Navigation test Checking the navigation links",
+              "timedOut": false,
+              "duration": 615,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "for (let i = 0; i<navigationLinks.length;i++) {\n            await driver.findElement(navigationLinks[i].id).click()\n            const currentUrl = await driver.getCurrentUrl();\n    \n            assert.strictEqual(currentUrl, navigationLinks[i].expectedLink, 'Navigation link not correct');\n            const backToHome = {id: \"back-to-products\"}\n            await driver.findElement(backToHome).click()\n        }",
+              "err": {},
+              "uuid": "c25902bf-fae0-4dec-b2d0-882fd837425a",
+              "parentUUID": "7ab1d166-b8e8-45ec-8fb1-3826f507d417",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c25902bf-fae0-4dec-b2d0-882fd837425a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 615,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+          "title": "Login validations test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\loginValidations.test.js",
+          "file": "\\test\\loginValidations.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login validations test\"",
+              "fullTitle": "Login validations test \"before each\" hook in \"Login validations test\"",
+              "timedOut": false,
+              "duration": 2041,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "e20febab-ff58-45d5-a911-3ed8abe6a9fd",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login validations test\"",
+              "fullTitle": "Login validations test \"after each\" hook in \"Login validations test\"",
+              "timedOut": false,
+              "duration": 45,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "d6ce6e2f-4a62-4c5f-9f42-894e08a10062",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login with empty input",
+              "fullTitle": "Login validations test Login with empty input",
+              "timedOut": false,
+              "duration": 109,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(logInBtn).click()\n    \nassert.ok(errorMessage, \"Element sa porukom o gresci ne postoji\");\nconst errorMessageElement = await driver.findElement(By.css(\".error-message-container\"));\n\n// Proverava da li element sadrži tačan tekst poruke o grešci\nconst errorMessageText = await errorMessageElement.getText();\nassert.strictEqual(errorMessageText, \"Epic sadface: Username is required\");",
+              "err": {},
+              "uuid": "f946e86c-7fb3-4402-b303-b9671fa2b8b2",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with wrong username",
+              "fullTitle": "Login validations test Login with wrong username",
+              "timedOut": false,
+              "duration": 309,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(usernameInput).sendKeys(wrongLoginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nconst errorMessageElement = await driver.findElement(By.css(\".error-message-container\"));\n// Proverava da li element sadrži tačan tekst poruke o grešci\nconst errorMessageText = await errorMessageElement.getText();\nassert.strictEqual(errorMessageText, \"Epic sadface: Username and password do not match any user in this service\");",
+              "err": {},
+              "uuid": "149d0f0f-7399-4f4c-90b1-b1a1725103c0",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with wrong password",
+              "fullTitle": "Login validations test Login with wrong password",
+              "timedOut": false,
+              "duration": 338,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(wrongLoginPassword);\nawait driver.findElement(logInBtn).click()\nconst errorMessageElement = await driver.findElement(By.css(\".error-message-container\"));\n// Proverava da li element sadrži tačan tekst poruke o grešci\nconst errorMessageText = await errorMessageElement.getText();\nassert.strictEqual(errorMessageText, \"Epic sadface: Username and password do not match any user in this service\");",
+              "err": {},
+              "uuid": "b89a4feb-6817-499f-a241-061a74fce39d",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with only username",
+              "fullTitle": "Login validations test Login with only username",
+              "timedOut": false,
+              "duration": 237,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(logInBtn).click()\nconst errorMessageElement = await driver.findElement(By.css(\".error-message-container\"));\n// Proverava da li element sadrži tačan tekst poruke o grešci\nconst errorMessageText = await errorMessageElement.getText();\nassert.strictEqual(errorMessageText, \"Epic sadface: Password is required\");",
+              "err": {},
+              "uuid": "f387a078-e1f8-4cfe-9cd6-ac350e731b66",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login only with password",
+              "fullTitle": "Login validations test Login only with password",
+              "timedOut": false,
+              "duration": 219,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\n    \nconst errorMessageElement = await driver.findElement(By.css(\".error-message-container\"));\n    \n// Proverava da li element sadrži tačan tekst poruke o grešci\nconst errorMessageText = await errorMessageElement.getText();\nassert.strictEqual(errorMessageText, \"Epic sadface: Username is required\");",
+              "err": {},
+              "uuid": "b394238e-8e03-4d95-9b34-452f03374ef1",
+              "parentUUID": "a4a3b497-ffbd-4391-ab07-7fa786646f62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f946e86c-7fb3-4402-b303-b9671fa2b8b2",
+            "149d0f0f-7399-4f4c-90b1-b1a1725103c0",
+            "b89a4feb-6817-499f-a241-061a74fce39d",
+            "f387a078-e1f8-4cfe-9cd6-ac350e731b66",
+            "b394238e-8e03-4d95-9b34-452f03374ef1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "073c985c-0d9c-438b-b1f6-71f0f1c59dd7",
+          "title": "Log out test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\logout.test.js",
+          "file": "\\test\\logout.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Log out test\"",
+              "fullTitle": "Log out test \"before all\" hook in \"Log out test\"",
+              "timedOut": false,
+              "duration": 3897,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\n//login\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(1500)",
+              "err": {},
+              "uuid": "710d2bad-22bb-4302-94ed-325a459d0f72",
+              "parentUUID": "073c985c-0d9c-438b-b1f6-71f0f1c59dd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Log out test\"",
+              "fullTitle": "Log out test \"after all\" hook in \"Log out test\"",
+              "timedOut": false,
+              "duration": 57,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "7c6be8ca-d921-4ac6-af85-d13251ee4ca5",
+              "parentUUID": "073c985c-0d9c-438b-b1f6-71f0f1c59dd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Logging out",
+              "fullTitle": "Log out test Logging out",
+              "timedOut": false,
+              "duration": 1145,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.id('react-burger-menu-btn')).click();\nawait driver.sleep(1000);\nawait driver.findElement(By.id('logout_sidebar_link')).click();\n\nconst currentUrl = await driver.getCurrentUrl();\nassert.strictEqual(currentUrl, visitPage, \"Logout not succesful\")",
+              "err": {},
+              "uuid": "6ef31a7f-5797-41ed-9b48-56258c586f93",
+              "parentUUID": "073c985c-0d9c-438b-b1f6-71f0f1c59dd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ef31a7f-5797-41ed-9b48-56258c586f93"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1145,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "0f6a1efc-7a18-49ed-a045-8af632018e1d",
+          "title": "Testing orders for each item",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\orderingEveryItem.test.js",
+          "file": "\\test\\orderingEveryItem.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Testing orders for each item\"",
+              "fullTitle": "Testing orders for each item \"before all\" hook in \"Testing orders for each item\"",
+              "timedOut": false,
+              "duration": 2116,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "143997d0-aaf8-448f-a573-d264960d9f59",
+              "parentUUID": "0f6a1efc-7a18-49ed-a045-8af632018e1d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Testing orders for each item\"",
+              "fullTitle": "Testing orders for each item \"after all\" hook in \"Testing orders for each item\"",
+              "timedOut": false,
+              "duration": 50,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "6b8e1e25-1d2c-4fed-bfc4-6c2e69bb3a38",
+              "parentUUID": "0f6a1efc-7a18-49ed-a045-8af632018e1d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Ordering every item",
+              "fullTitle": "Testing orders for each item Ordering every item",
+              "timedOut": false,
+              "duration": 3904,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//logovanje\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(1000)\nfor (let i = 0; i < toCartBtns.length; i++){\n    await driver.findElement(toCartBtns[i]).click()\n    //dodavanje u korpu i checkout\n    await driver.findElement(shoppingCart).click()\n    await driver.findElement(checkoutBtn).click()\n    //popunjavanje informacija\n    await driver.findElement(firstNameInput).sendKeys(firstName)\n    await driver.findElement(lastNameInput).sendKeys(lastName)\n    await driver.findElement(zipCodeInput).sendKeys(zipCode)\n    await driver.findElement(continueBtn).click()\n    \n    //zavrsni koraci\n    await driver.findElement(finishBtn).click()\n    await driver.findElement(homeBtn).click()\n    // Dobijanje trenutnog URL-a\n    const currentUrl = await driver.getCurrentUrl();\n    \n    // Provera da li je URL onaj koji očekujemo\n    assert.strictEqual(currentUrl, homePage, 'URL not correct');\n}",
+              "err": {},
+              "uuid": "b4136dcd-85f3-472d-9099-a6d313aed4cb",
+              "parentUUID": "0f6a1efc-7a18-49ed-a045-8af632018e1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b4136dcd-85f3-472d-9099-a6d313aed4cb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3904,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "c6538216-2b7c-4ebb-9342-b91f779158ac",
+          "title": "Ordering process test",
+          "fullFile": "D:\\repos\\standard_user_test\\test\\orderProcess.test.js",
+          "file": "\\test\\orderProcess.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Ordering process test\"",
+              "fullTitle": "Ordering process test \"before all\" hook in \"Ordering process test\"",
+              "timedOut": false,
+              "duration": 3237,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new Builder().forBrowser(process.env.BROWSER).build();\nawait driver.get(visitPage);\nawait driver.manage().window().maximize();\nawait driver.findElement(usernameInput).sendKeys(loginUsername);\nawait driver.findElement(passwordInput).sendKeys(loginPassword);\nawait driver.findElement(logInBtn).click()\nawait driver.sleep(800)",
+              "err": {},
+              "uuid": "739b5dfc-c7ec-4053-a7f9-503e1d5fb413",
+              "parentUUID": "c6538216-2b7c-4ebb-9342-b91f779158ac",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Ordering process test\"",
+              "fullTitle": "Ordering process test \"after all\" hook in \"Ordering process test\"",
+              "timedOut": false,
+              "duration": 57,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "9168863d-bf4b-4a63-a5f8-ced5a8da136e",
+              "parentUUID": "c6538216-2b7c-4ebb-9342-b91f779158ac",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Ordering process",
+              "fullTitle": "Ordering process test Ordering process",
+              "timedOut": false,
+              "duration": 505,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//adding to cart and checkout\n        await driver.findElement(backpackBtn).click()\n        await driver.findElement(shoppingCart).click()\n        await driver.findElement(checkoutBtn).click()\n        //input\n        await driver.findElement(firstNameInput).sendKeys(firstName)\n        await driver.findElement(lastNameInput).sendKeys(lastName)\n        await driver.findElement(zipCodeInput).sendKeys(zipCode)\n        await driver.findElement(continueBtn).click()\n        await driver.findElement(finishBtn).click()\n        await driver.findElement(homeBtn).click()\n        const currentUrl = await driver.getCurrentUrl();\n        assert.strictEqual(currentUrl, homePage, 'Ordering process failed');",
+              "err": {},
+              "uuid": "57f2e938-0677-4784-a036-feb123973f5a",
+              "parentUUID": "c6538216-2b7c-4ebb-9342-b91f779158ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57f2e938-0677-4784-a036-feb123973f5a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 505,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -22,6 +22,7 @@ const {
     homeBtn,
     continueBtn
 } = require('./constants');
+require('dotenv').config();
 
 describe("Ordering process test", function(){
     this.timeout(10000)
@@ -29,7 +30,7 @@ describe("Ordering process test", function(){
     let driver;
 
     before(async () => {
-        driver = new Builder().forBrowser("chrome").build();
+        driver = new Builder().forBrowser(process.env.BROWSER).build();
         await driver.get(visitPage);
         await driver.manage().window().maximize();
         await driver.findElement(usernameInput).sendKeys(loginUsername);

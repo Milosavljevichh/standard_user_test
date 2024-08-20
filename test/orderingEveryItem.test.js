@@ -1,6 +1,7 @@
 //testiramo da li radi proces porudzbine za svaki item
 const { Builder } = require('selenium-webdriver');
 const assert = require("assert");
+require('dotenv').config();
 const {
     visitPage,
     homePage,
@@ -31,7 +32,7 @@ describe("Testing orders for each item", function(){
     let driver;
 
     before(async () => {
-        driver = new Builder().forBrowser("chrome").build();
+        driver = new Builder().forBrowser(process.env.BROWSER).build();
         await driver.get(visitPage);
         await driver.manage().window().maximize();
     });

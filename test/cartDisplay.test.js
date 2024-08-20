@@ -1,4 +1,5 @@
 const { Builder } = require('selenium-webdriver');
+require('dotenv').config();
 
 const assert = require("assert")
 const {
@@ -17,7 +18,7 @@ describe("Cart display test", function(){
     let driver;
 
     before(async () => {
-        driver = new Builder().forBrowser("chrome").build();
+        driver = new Builder().forBrowser(process.env.BROWSER).build();
         await driver.get(visitPage);
         await driver.manage().window().maximize();
         //login
